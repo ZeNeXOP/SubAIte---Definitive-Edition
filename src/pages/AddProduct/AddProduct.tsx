@@ -5,6 +5,7 @@ export const AddProduct = () => {
     name: "",
     newPrice: 0,
     oldPrice: 0,
+    category: "men",
   });
 
   const handleChange = (e) => {
@@ -43,6 +44,7 @@ export const AddProduct = () => {
           name: "",
           newPrice: 0,
           oldPrice: 0,
+          category: "men",
         });
       }
     } catch (error) {
@@ -62,6 +64,15 @@ export const AddProduct = () => {
           onChange={handleChange}
           placeholder="Name"
         />
+        <select
+          name="category"
+          value={product.category}
+          onChange={handleChange}
+        >
+          <option value="men">Men</option>
+          <option value="women">Women</option>
+          <option value="kids">Kids</option>
+        </select>
         <input
           type="number"
           name="newPrice"

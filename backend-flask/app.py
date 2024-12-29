@@ -24,9 +24,11 @@ def add_product():
         product_data = request.get_json()
         
         
-        if not all(key in product_data for key in ['name','newPrice','oldPrice']):
+        if not all(key in product_data for key in ['name','newPrice','oldPrice','category']):
             return jsonify({'error': 'Missing required fields'}), 400
 
+        if product_data['category'] not in ['men','women','kids']:
+            return jsonify({'error': "Invalid category"}), 400
         
         product_data['newPrice'] = float(product_data['newPrice'])
         product_data['oldPrice'] = float(product_data['oldPrice'])

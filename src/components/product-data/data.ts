@@ -1,8 +1,9 @@
 export interface item {
   _id: string;
   name: string;
-  new_price: number;
-  old_price: number;
+  newPrice: number;
+  oldPrice: number;
+  category: string;
 }
 
 

@@ -9,9 +9,14 @@ export const NavBar = () => {
 
   return (
     <div className="navbar">
-      <div className="nav-logo">
+      <div
+        className="nav-logo"
+        onClick={() => {
+          setMenu("shop");
+        }}
+      >
         {/* insert image tag for logo*/}
-        <p>Subaite</p>
+        <Link to="/">Subaite</Link> {menu === "shop" ? <hr /> : <></>}
       </div>
       <ul className="nav-menu">
         <li
@@ -29,7 +34,7 @@ export const NavBar = () => {
           }}
         >
           {" "}
-          <Link to="/men">Men</Link> {menu === "men" ? <hr /> : <></>}
+          <Link to="/category/men">Men</Link> {menu === "men" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
@@ -37,7 +42,7 @@ export const NavBar = () => {
           }}
         >
           {" "}
-          <Link to="/women">Women</Link> {menu === "women" ? <hr /> : <></>}
+          <Link to="/category/women">Women</Link> {menu === "women" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
@@ -45,16 +50,20 @@ export const NavBar = () => {
           }}
         >
           {" "}
-          <Link to="/kids">Kids</Link> {menu === "kids" ? <hr /> : <></>}
+          <Link to="/category/kids">Kids</Link> {menu === "kids" ? <hr /> : <></>}
         </li>{" "}
+        <li onClick={() => {
+          setMenu("add");
+        }}
+        >
+          {""}
+          <Link to="/add">Add Product</Link> {menu === "add" ? <hr /> : <></>}
+        </li>
         {/* using a ternery operator we check if the menu is equal to the setMenu which was set up when clicked, if it is, a different css implementation is rendered*/}
       </ul>
       <div className="login-cart">
         <Link to="/login">
           <button>Login</button>
-        </Link>
-        <Link to='/add'>
-          <button>Add Product</button>
         </Link>
         <Link to="/login">
           <button>Sign-Up</button>
