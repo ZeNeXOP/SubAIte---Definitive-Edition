@@ -53,6 +53,9 @@ export const NavBar = () => {
         <Link to="/login">
           <button>Login</button>
         </Link>
+        <Link to='/add'>
+          <button>Add Product</button>
+        </Link>
         <Link to="/login">
           <button>Sign-Up</button>
         </Link>

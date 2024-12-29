@@ -8,17 +8,21 @@ import { ShopCategory } from "./pages/ShopCategory";
 import { Product } from "./pages/Product";
 import { Cart } from "./pages/Cart";
 import { LoginSignup } from "./pages/LoginSignup";
+import AddProduct from "./pages/AddProduct/AddProduct";
 
 function App() {
   return (
     <div>
-      <BrowserRouter>  {/* using browserrouter to navigate through the pages */}
+      <BrowserRouter>
+        {" "}
+        {/* using browserrouter to navigate through the pages */}
         <NavBar />
-        <Routes>       
+        <Routes>
           <Route path="/" element={<Shop />} />
           <Route path="/men" element={<ShopCategory category="men" />} />
           <Route path="/women" element={<ShopCategory category="women" />} />
           <Route path="/kids" element={<ShopCategory category="kids" />} />
+          <Route path="/add" element={<AddProduct category="addproduct" />} />
           <Route path="product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
           </Route>

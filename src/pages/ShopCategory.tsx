@@ -1,25 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Item } from "../components/item/Item";
-import data_product from "../components/product-data/data";
-
+import { item } from "../components/product-data/data";
 
 export const ShopCategory = () => {
+  const [products, setProducts] = useState<item[]>([]);  {/* first figure out the item interface from product-data/data 
+    and program it to be more relevant with image fs
+    removed image from item interface*/}
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/api/products");
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   return (
     <div>
       <h1>Men</h1>
 
       <div className="men-item">
-        {data_product.map((item, i) => {
-            return <Item
-            key={i}
-            id={item.id}
-            name={item.name}
-            new_price={item.new_price}
-            old_price={item.old_price}
-          />
-        })}
+        {products.map((item) => (
+          <Item key={item._id} {...item} />
+        ))}
       </div>
-
     </div>
   );
 };
