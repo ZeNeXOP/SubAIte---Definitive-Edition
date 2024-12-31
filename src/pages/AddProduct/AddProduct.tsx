@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./AddProduct.css";
 
 export const AddProduct = () => {
   const [product, setProduct] = useState({
@@ -54,8 +55,8 @@ export const AddProduct = () => {
   };
 
   return (
-    <div>
-      <h1>Add Product</h1>
+    <div className="add-product-container">
+      <h1 className="add-product-title">Add Product</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

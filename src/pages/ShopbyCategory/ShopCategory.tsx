@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Item } from "../components/item/Item";
-import { item } from "../components/product-data/data";
+import { Item } from "../../components/item/Item";
+import { item } from "../../components/product-data/data";
 import { useParams } from "react-router-dom";
+import "./ShopCategory.css";
 
 export const ShopCategory: React.FC = () => {
   const { category } = useParams<CategoryParams>();

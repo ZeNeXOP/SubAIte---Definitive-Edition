@@ -1,5 +1,5 @@
 import React from "react";
-import hero_image from "../Assets/hero_image.png";
+import hero_image from "../../../components/Assets/hero_image.png";
 import "./Hero.css";
 
 
@@ -10,7 +10,7 @@ export const Hero = () => {
         <h2>New Arrivals Only</h2>
         <div>
           <div className="hero-hand-icon">
-            <p>new</p>
+            <p>New</p>
           </div>
           <p>Collections</p>
           <p>For Everyone</p>

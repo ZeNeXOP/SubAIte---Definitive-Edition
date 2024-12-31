@@ -3,10 +3,9 @@
     justify-content: space-between;
     box-shadow: 0 1px 3px -2px black;
     width: 100%;
-    position: fixed;
-    top:0;
-    z-index:1000;
-    height:120px;
+    position: relative;
+    height: var(--navbar-height);
+    background-color: white;
 }
 
 .nav-logo a,
@@ -77,10 +76,10 @@
     width: 22px;
     height: 22px;
     display:flex;
-    justity-content: center;
+    justify-content: center;
     align-items: center;
     margin-top: -35px;
-    margin-left: -10px;
+    margin-left: -56px;
     border-radius: 11px;
     font-size: 14px;
     background: #ff4141;

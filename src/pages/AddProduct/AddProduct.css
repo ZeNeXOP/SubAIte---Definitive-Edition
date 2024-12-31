@@ -11,3 +11,14 @@ select:focus {
     outline: none;
     border-color: #007bff;
 }
+
+.add-product-container {
+    background: linear-gradient(90deg, rgb(0, 0, 0), #0c55a3);
+    padding: 480px;
+    padding-right: 605px;
+
+h1 {
+    font-size: 48px;
+    font-weight: 1000;
+    color: #ffffff;
+}

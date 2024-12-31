@@ -3,16 +3,16 @@ import "./App.css";
 import { NavBar } from "./components/nav-bar/NavBar"; //importing navigation bar from commponents
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Shop } from "./pages/Shop"; //importing shop page from pages
-import { ShopCategory } from "./pages/ShopCategory";
-import { Product } from "./pages/Product";
-import { Cart } from "./pages/Cart";
-import { LoginSignup } from "./pages/LoginSignup";
+import { Shop } from "./pages/Landing Page/Shop"; //importing shop page from pages
+import { ShopCategory } from "./pages/ShopbyCategory/ShopCategory";
+import { Product } from "./pages/Product Page/Product";
+import { Cart } from "./pages/Cart/Cart";
+import { LoginSignup } from "./pages/LoginSignup/LoginSignup";
 import AddProduct from "./pages/AddProduct/AddProduct";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <BrowserRouter>
         {" "}
         {/* using browserrouter to navigate through the pages */}
